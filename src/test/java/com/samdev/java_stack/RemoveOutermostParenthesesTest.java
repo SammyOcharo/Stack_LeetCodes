@@ -10,9 +10,9 @@ class RemoveOutermostParenthesesTest {
     void removeOuterParentheses() {
 
         RemoveOutermostParentheses removeOutermostParentheses = new RemoveOutermostParentheses();
-        assertEquals("()()()", removeOutermostParentheses.removeOuterParentheses("(()())(())"));
-        assertEquals("()()()()(())", removeOutermostParentheses.removeOuterParentheses("(()())(())(()(()))"));
-        assertEquals("", removeOutermostParentheses.removeOuterParentheses("()()"));
-        assertNotEquals("", removeOutermostParentheses.removeOuterParentheses("(()())(())(()(()))"));
+        assertEquals("()()()", removeOutermostParentheses.removeOuterParentheses("(()())(())"), "expected a True");
+        assertEquals("()()()()(())", removeOutermostParentheses.removeOuterParentheses("(()())(())(()(()))"), "expected a True");
+        assertEquals("", removeOutermostParentheses.removeOuterParentheses("()()"), "expected a True");
+        assertNotEquals("", removeOutermostParentheses.removeOuterParentheses("(()())(())(()(()))"), "Expected a False");
     }
 }
