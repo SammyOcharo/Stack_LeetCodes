@@ -12,5 +12,7 @@ class RemoveOutermostParenthesesTest {
         RemoveOutermostParentheses removeOutermostParentheses = new RemoveOutermostParentheses();
         assertEquals("()()()", removeOutermostParentheses.removeOuterParentheses("(()())(())"));
         assertEquals("()()()()(())", removeOutermostParentheses.removeOuterParentheses("(()())(())(()(()))"));
+        assertEquals("", removeOutermostParentheses.removeOuterParentheses("()()"));
+        assertNotEquals("", removeOutermostParentheses.removeOuterParentheses("(()())(())(()(()))"));
     }
 }
