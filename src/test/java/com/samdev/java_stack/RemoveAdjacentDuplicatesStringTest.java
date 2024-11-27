@@ -11,6 +11,7 @@ class RemoveAdjacentDuplicatesStringTest {
         RemoveAdjacentDuplicatesString removeAdjacentDuplicatesString = new RemoveAdjacentDuplicatesString();
         assertEquals("ca", removeAdjacentDuplicatesString.removeDuplicates("abbaca"), "Expected is to be True");
         assertEquals("ay", removeAdjacentDuplicatesString.removeDuplicates("azxxzy"), "Expected is to be True");
+        assertNotEquals("ay", removeAdjacentDuplicatesString.removeDuplicates("azxxzyy"), "Expected is to be False");
 
     }
 }
