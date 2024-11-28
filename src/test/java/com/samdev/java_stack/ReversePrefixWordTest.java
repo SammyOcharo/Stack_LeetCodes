@@ -12,6 +12,8 @@ class ReversePrefixWordTest {
         ReversePrefixWord reversePrefixWord = new ReversePrefixWord();
 
         assertEquals("dcbaefd", reversePrefixWord.reversePrefix("abcdefd", 'd'), "Return True");
-
+        assertEquals("zxyxxe", reversePrefixWord.reversePrefix("xyxzxe", 'z'), "Return True");
+        assertEquals("abcd", reversePrefixWord.reversePrefix("abcd", 'z'), "Return True");
+        assertNotEquals("aaaaa", reversePrefixWord.reversePrefix("abcdefd", 'd'), "Return False");
     }
 }
